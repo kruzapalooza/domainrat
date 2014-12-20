@@ -54,6 +54,9 @@ class CreateTables < ActiveRecord::Migration
 			x.belongs_to :contact
 			x.belongs_to :registrar
 		end
+
+		# add_index ???
+
 	end	
 end
 

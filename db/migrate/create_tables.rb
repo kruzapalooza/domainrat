@@ -2,6 +2,7 @@
 class CreateTables < ActiveRecord::Migration
 	def change 
 		create_table :contacts do |t|
+			t.timestamps
 			t.serial :id
 			t.string :name
 			t.string :org
@@ -14,6 +15,7 @@ class CreateTables < ActiveRecord::Migration
 		end
 		
 		create_table  :domains do |t|
+			t.timestamps
 			t.integer :iana_id
 			t.string  :expire_date
 			t.string  :domain_name 
@@ -21,12 +23,14 @@ class CreateTables < ActiveRecord::Migration
 		end
 
 		create_table  :nameservers do |t|
+			t.timestamps
 			t.integer :id
 			t.string  :name
 			self.primary_key = 'id'
 		end
 
 		create_table  :registrars do |t|
+			t.timestamps
 			t.integer :iana_id
 			t.string  :name
 			t.string  :registrar_name

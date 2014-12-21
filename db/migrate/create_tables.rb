@@ -68,12 +68,12 @@ class Domain < ActiveRecord::Base
 end
 
 class Contact < ActiveRecord::Base
-	self.primary_key = 'id'
 	has_and_belongs_to_many :domains
+	# self.primary_key = 'id' # do we need this???
 end
 
 class Nameserver < ActiveRecord::Base
-
+	# self.primary_key = 'id' # do we need this???
 	has_and_belongs_to_many :domains
 end
 

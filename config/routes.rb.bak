@@ -1,46 +1,15 @@
 Rails.application.routes.draw do
-=begin
-  get 'domains/index'
-
-  get 'domains/show'
-
-  get 'domains/new'
-
-  get 'domains/edit'
-
-  get 'domains/delete'
-
-  get 'nameservers/index'
-
-  get 'nameservers/show'
-
-  get 'nameservers/new'
-
-  get 'nameservers/edit'
-
-  get 'nameservers/delete'
-
-  get 'contacts/index'
-
-  get 'contacts/show'
-
-  get 'contacts/new'
-
-  get 'contacts/edit'
-
-  get 'contacts/delete'
-
   get 'contacts/view'
 
   get 'cntl1/view1'
-=end
-  # resources :domains
 
-  # resources :nameservers
+  resources :domains
+
+  resources :nameservers
 
   resources :contacts
 
-  # resources :posts
+  resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
